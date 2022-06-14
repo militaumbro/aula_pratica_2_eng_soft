@@ -5,12 +5,18 @@ on:
   pull_request:
     branches: [ "master" ]
   workflow_dispatch:
+
+  
 jobs:
-  Explore-GitHub-Actions:
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        python-version: [3.6, 3.7]
-        os: [ubuntu-latest, macOS-latest, windows-latest]
+  Test-Ubuntu:
+    runs-on: ubuntu-latest
+    steps:
+      - run: python test.py
+  Test-Ubuntu:
+    runs-on: macOS-latest
+    steps:
+      - run: python test.py
+  Test-Ubuntu:
+    runs-on: windows-latest
     steps:
       - run: python test.py
