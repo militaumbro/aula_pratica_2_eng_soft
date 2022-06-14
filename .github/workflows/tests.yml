@@ -12,11 +12,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: python test.py
-  Test-Ubuntu:
+  Test-MacOS:
     runs-on: macOS-latest
     steps:
       - run: python test.py
-  Test-Ubuntu:
+  Test-Windows:
     runs-on: windows-latest
     steps:
       - run: python test.py
