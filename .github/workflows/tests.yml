@@ -1,0 +1,12 @@
+name: GitHub Actions Demo
+on: [push]
+  workflow_dispatch:
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        python-version: [3.6, 3.7]
+        os: [ubuntu-latest, macOS-latest, windows-latest]
+    steps:
+      - run: python test.py
