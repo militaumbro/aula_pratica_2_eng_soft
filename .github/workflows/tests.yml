@@ -11,12 +11,17 @@ jobs:
   Test-Ubuntu:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v3
       - run: python test.py
+
   Test-MacOS:
     runs-on: macOS-latest
     steps:
+      - uses: actions/checkout@v3
       - run: python test.py
+      
   Test-Windows:
     runs-on: windows-latest
     steps:
+      - uses: actions/checkout@v3
       - run: python test.py
